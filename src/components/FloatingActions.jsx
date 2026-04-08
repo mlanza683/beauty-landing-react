@@ -14,12 +14,13 @@ export default function FloatingActions() {
         WhatsApp
       </a>
 
-      <Link
+   <Link
   to="/booking"
-  className="flex items-center gap-2 rounded-full bg-black px-5 py-3 font-semibold text-white shadow-lg transition hover:-translate-y-1 hover:bg-gray-900"
+  className="flex items-center gap-2 rounded-full bg-black px-6 py-3 font-semibold text-white shadow-[0_10px_25px_rgba(0,0,0,0.3)] transition hover:-translate-y-1 hover:bg-gray-800"
 >
-  <CalendarDays size={18} className="text-white" />
-  Prenota
+  <CalendarDays size={18} color="white" />
+  <span>Prenota</span>
+</Link>
 </Link>
     </div>
   );
