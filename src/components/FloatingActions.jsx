@@ -16,11 +16,10 @@ export default function FloatingActions() {
 
    <Link
   to="/booking"
-  className="flex items-center gap-2 rounded-full bg-black px-6 py-3 font-semibold text-white shadow-[0_10px_25px_rgba(0,0,0,0.3)] transition hover:-translate-y-1 hover:bg-gray-800"
+  className="flex items-center gap-2 rounded-full bg-black px-5 py-3 font-semibold shadow-lg transition hover:-translate-y-1 hover:bg-neutral-800"
 >
-  <CalendarDays size={18} color="white" />
-  <span>Prenota</span>
-</Link>
+  <CalendarDays size={18} style={{ color: "#fff" }} />
+  <span style={{ color: "#fff", display: "inline-block" }}>Prenota</span>
 </Link>
     </div>
   );
