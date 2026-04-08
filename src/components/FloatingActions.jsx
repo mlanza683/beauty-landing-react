@@ -15,12 +15,12 @@ export default function FloatingActions() {
       </a>
 
       <Link
-        to="/booking"
-        className="flex items-center gap-2 rounded-full bg-[var(--black)] px-5 py-3 font-semibold text-white shadow-[0_14px_28px_rgba(0,0,0,0.18)] transition hover:-translate-y-1"
-      >
-        <CalendarDays size={18} />
-        Prenota
-      </Link>
+  to="/booking"
+  className="flex items-center gap-2 rounded-full bg-black px-5 py-3 font-semibold text-white shadow-lg transition hover:-translate-y-1 hover:bg-gray-900"
+>
+  <CalendarDays size={18} className="text-white" />
+  Prenota
+</Link>
     </div>
   );
 }
