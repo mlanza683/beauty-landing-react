@@ -32,7 +32,9 @@ export default function Navbar() {
       <header className="sticky top-0 z-50 border-b border-black/5 bg-[rgba(245,245,245,0.9)] backdrop-blur-xl">
         <div className="container-soft flex items-center justify-between py-5">
           <Link to="/" className="flex flex-col leading-tight">
-            <span className="text-xl font-semibold tracking-tight">Aurea</span>
+            <span className="text-xl font-semibold tracking-tight text-[#111827]">
+              Aurea
+            </span>
             <span className="text-xs tracking-[0.25em] text-black/50">
               STUDIO
             </span>
@@ -102,7 +104,9 @@ export default function Navbar() {
               transition={{ duration: 0.28, ease: "easeOut" }}
             >
               <div className="flex items-center justify-between border-b border-black/5 px-5 py-5">
-                <span className="text-xl font-semibold">Aurea Studio</span>
+                <span className="text-xl font-semibold text-[#111827]">
+                  Aurea Studio
+                </span>
 
                 <button
                   type="button"
@@ -115,7 +119,7 @@ export default function Navbar() {
               </div>
 
               <div className="flex h-[calc(100%-81px)] flex-col justify-between px-5 py-6">
-                <nav className="flex flex-col gap-2">
+                <nav className="flex flex-col gap-4">
                   {links.map((link, index) => {
                     const active = location.pathname === link.to;
                     const isLanding = link.to === "/landing";
@@ -129,18 +133,25 @@ export default function Navbar() {
                       >
                         <Link
                           to={link.to}
-                          className={`flex items-center justify-between rounded-2xl px-4 py-4 text-base ${
+                          className={`flex items-center justify-between rounded-[28px] px-6 py-6 text-[18px] font-medium transition ${
                             active
                               ? isLanding
-                                ? "bg-[#e11d48] text-white"
-                                : "bg-black text-white"
-                              : "bg-white text-black shadow-sm"
+                                ? "bg-[#e11d48] text-white shadow-[0_12px_30px_rgba(225,29,72,0.28)]"
+                                : "bg-black text-white shadow-[0_12px_30px_rgba(0,0,0,0.22)]"
+                              : "bg-white text-[#111827] shadow-sm"
                           }`}
                         >
-                          <span>
+                          <span className={active ? "text-white" : "text-[#111827]"}>
                             {link.label === "Landing" ? "🔥 Landing" : link.label}
                           </span>
-                          <span className="text-sm opacity-60">→</span>
+
+                          <span
+                            className={`text-[22px] leading-none ${
+                              active ? "text-white opacity-100" : "text-black/45"
+                            }`}
+                          >
+                            →
+                          </span>
                         </Link>
                       </motion.div>
                     );
@@ -157,7 +168,21 @@ export default function Navbar() {
                   </h3>
 
                   <div className="mt-5 flex flex-col gap-3">
-                    <Link to="/booking" className="btn-dark w-full">
+                    <Link
+                      to="/booking"
+                      style={{
+                        background: "#000000",
+                        color: "#ffffff",
+                        borderRadius: "9999px",
+                        padding: "14px 24px",
+                        fontWeight: 600,
+                        display: "inline-flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        textDecoration: "none",
+                        boxShadow: "0 8px 22px rgba(0,0,0,0.22)",
+                      }}
+                    >
                       Prenota ora
                     </Link>
 
@@ -165,7 +190,18 @@ export default function Navbar() {
                       href="https://wa.me/391234567890"
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex w-full items-center justify-center rounded-full bg-white px-5 py-3 font-semibold text-[#9f1239] shadow-sm transition hover:-translate-y-0.5"
+                      style={{
+                        background: "#ffffff",
+                        color: "#9f1239",
+                        borderRadius: "9999px",
+                        padding: "14px 24px",
+                        fontWeight: 600,
+                        display: "inline-flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        textDecoration: "none",
+                        boxShadow: "0 8px 22px rgba(0,0,0,0.12)",
+                      }}
                     >
                       WhatsApp
                     </a>
